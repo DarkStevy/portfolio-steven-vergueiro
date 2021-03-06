@@ -68,10 +68,30 @@
         transform: translateX(0%);
         transition: transform .8s ease-out;
         overflow: auto;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
 
-        >figure {
-            width: 50%;
-            margin: auto;
+        div {
+            &:first-child {
+                width: $col-12;
+                >h2 {
+                    padding: 30px 15px;
+                }
+                >figure {
+                    width: 70%;
+                    margin: auto;
+                }
+            }
+            &:nth-child(2){
+                width: $col-6;
+            }
+            &:nth-child(3){
+                width: $col-6;
+            }
+            &:last-child {
+                width: $col-12;
+            }
         }
     }
 
@@ -90,7 +110,6 @@
     #closeDescriptionProject {
         height: 100%;
         width: 60%;
-        background-color: black;
         position: fixed;
         top: 0;
         z-index: 200;

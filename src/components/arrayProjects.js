@@ -13,7 +13,7 @@ export const arrayProject = {
             project: "Personnel",
             year: 2021,
             category: "Developpement web",
-
+            background: "linear-gradient(to top left, #d40e32, #272424, #272424)",
         }
     ]
 }

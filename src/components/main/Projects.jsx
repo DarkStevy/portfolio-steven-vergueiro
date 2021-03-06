@@ -1,7 +1,5 @@
-import React, { useContext, useEffect, useState } from 'react';
-import { ThemeProject } from '../../Themes/ThemeMain';
+import React, { useEffect, useState } from 'react';
 import { arrayProject } from '../arrayProjects';
-import { ThemeContext } from '../contexts/ThemeContext';
 import Cliparts from '../images/Cliparts';
 import Presentations from '../images/Presentations';
 
@@ -10,7 +8,6 @@ export default function Projects() {
     const [overlayId, setOverlayId] = useState("closeOverlayDescriptionProject")
     const [blockDescriptionProject, setBlockDescriptionProject] = useState("closeDescriptionProject")
     const [descriptionProject, setDescriptionProject] = useState()
-    const theme = useContext(ThemeContext)
 
     function blockOverlay() {
         (overlay === false) ? setOverlay(true) : setOverlay(false);
@@ -42,21 +39,30 @@ export default function Projects() {
     function Description() {
         if(descriptionProject !== undefined) {
             const{name, url, developped, technology, imgPresentationPc, description, project, year, category} = descriptionProject
+        
             return (
                 <>
-                    <h1>{name}</h1>
-                    <figure>
-                        <Presentations nameImage={imgPresentationPc} />
-                    </figure>
-                    <p>{developped}</p>
-                    <p>{project}</p>
-                    <p>{description}</p>
-                    {technology.map((value) => (
-                        <p>{value}</p>
-                    ))}
-                    <p>{category}</p>
-                    <p>{year}</p>
-                    <a href={url} target="_blank">Voir le site</a>
+                    <div>
+                        <h2>{name}</h2>
+                        <figure>
+                            <Presentations nameImage={imgPresentationPc} />
+                        </figure>
+                    </div>
+                    <div>
+                        <p>{developped}</p>
+                        <p>{project}</p>
+                        <p>{description}</p>
+                    </div>
+                    <div>
+                        {technology.map((value) => (
+                            <p>{value}</p>
+                        ))}
+                        <p>{category}</p>
+                        <p>{year}</p>
+                    </div>
+                    <div>
+                        <a href={url} target="_blank">Voir le site</a>
+                    </div>
                 </>
             )
         }
@@ -84,7 +90,7 @@ export default function Projects() {
 
             <div onClick={blockOverlay} id={overlayId}></div>
 
-            <div style={ThemeProject(theme)} id={blockDescriptionProject}>
+            <div style={(descriptionProject !== undefined) && {background : descriptionProject.background}} id={blockDescriptionProject}>
                 <Description/>
             </div>
         </>
