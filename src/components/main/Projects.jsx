@@ -90,7 +90,7 @@ export default function Projects() {
 
             <div onClick={blockOverlay} id={overlayId}></div>
 
-            <div style={(descriptionProject !== undefined) && {background : descriptionProject.background}} id={blockDescriptionProject}>
+            <div id={blockDescriptionProject}>
                 <Description/>
             </div>
         </>
