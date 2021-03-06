@@ -16,7 +16,7 @@ import { ThemeContext } from "./contexts/ThemeContext.js"
 
 
 
-export default function Layout({ children }) {
+const Layout = ({ children }) => {
   const data = useStaticQuery(graphql`
     query SiteTitleQuery {
       site {
@@ -49,3 +49,5 @@ export default function Layout({ children }) {
 Layout.propTypes = {
   children: PropTypes.node.isRequired,
 }
+
+export default Layout

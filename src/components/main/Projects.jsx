@@ -41,7 +41,7 @@ export default function Projects() {
 
     function Description() {
         if(descriptionProject !== undefined) {
-            const{name, url, developped, technology, imgPresentationPc, cxvimgPresentationPhone, description, project, year, category} = descriptionProject
+            const{name, url, developped, technology, imgPresentationPc, description, project, year, category} = descriptionProject
             return (
                 <>
                     <h1>{name}</h1>
