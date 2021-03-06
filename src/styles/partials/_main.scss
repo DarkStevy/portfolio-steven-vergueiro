@@ -1,0 +1,41 @@
+@import './main/skills';
+@import './main/me';
+@import './main/formations';
+@import './main/projects.scss';
+
+main {
+    
+    background-image: url('../images/background.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    section {    
+        padding-top: 70px;
+        min-height: calc(100vh - 70px);
+        height: auto;
+        position: relative;
+
+         h2 {
+            padding: 0 30px;
+            font-size: 3rem;
+            font-family: $title;
+         }
+    }
+
+    >div {
+        width: 100%;
+        min-height: 100vh;
+        top: 0;
+        position: fixed;
+        background-image: url('../images/94170.jpg');
+        background-size: cover;
+        visibility: hidden;
+    }
+        
+        
+    #fixed {
+        visibility: visible;
+    }
+    
+}
+
