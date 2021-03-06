@@ -38,10 +38,10 @@ export default function Projects() {
 
     function Description() {
         if(descriptionProject !== undefined) {
-            const{name, url, developped, technology, imgPresentationPc, description, project, year, category} = descriptionProject
+            const{background, name, url, developped, technology, imgPresentationPc, description, project, year, category} = descriptionProject
         
             return (
-                <>
+                <div style={{background : background}} id="descriptionProject">
                     <div>
                         <h2>{name}</h2>
                         <figure>
@@ -63,7 +63,7 @@ export default function Projects() {
                     <div>
                         <a href={url} target="_blank">Voir le site</a>
                     </div>
-                </>
+                </div>
             )
         }
         else {
