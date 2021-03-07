@@ -60,6 +60,7 @@
         flex-wrap: wrap;
 
         div {
+            
             &:first-child {
                 width: $col-12;
                 >h2 {
@@ -72,9 +73,11 @@
             }
             &:nth-child(2){
                 width: $col-6;
+                padding: 30px 15px;
             }
             &:nth-child(3){
                 width: $col-6;
+                padding: 30px 15px;
             }
             &:last-child {
                 width: $col-12;

@@ -8,6 +8,11 @@ export default function Projects() {
     const [overlayId, setOverlayId] = useState("closeOverlayDescriptionProject")
     const [blockDescriptionProject, setBlockDescriptionProject] = useState("closeDescriptionProject")
     const [descriptionProject, setDescriptionProject] = useState()
+    const [backgroundDescription, setBackgroundDescription] = useState();
+
+    const backgroundDefault = {
+        background: 'rgb(23, 36, 78)'
+    }
 
     function blockOverlay() {
         (overlay === false) ? setOverlay(true) : setOverlay(false);
@@ -28,6 +33,12 @@ export default function Projects() {
             setOverlayId("openOverlayDescriptionProject")
             setBlockDescriptionProject("openDescriptionProject")
             document.body.style.overflow = "hidden";
+            if(descriptionProject !== undefined) {
+                setBackgroundDescription(descriptionProject.background)
+            }
+            else {
+                setBackgroundDescription(backgroundDefault.background)
+            }
         }
         else if(overlay === false) {
             setOverlayId("closeOverlayDescriptionProject")
@@ -38,10 +49,10 @@ export default function Projects() {
 
     function Description() {
         if(descriptionProject !== undefined) {
-            const{background, name, url, developped, technology, imgPresentationPc, description, project, year, category} = descriptionProject
+            const{name, url, developped, technology, imgPresentationPc, description, project, year, category} = descriptionProject
         
             return (
-                <div style={{background : background}} id="descriptionProject">
+                <div id="descriptionProject">
                     <div>
                         <h2>{name}</h2>
                         <figure>
@@ -90,7 +101,7 @@ export default function Projects() {
 
             <div onClick={blockOverlay} id={overlayId}></div>
 
-            <div id={blockDescriptionProject}>
+            <div style={{background : backgroundDescription}}  id={blockDescriptionProject}>
                 <span onClick={blockOverlay} className="close"></span>
                 <Description/>
             </div>

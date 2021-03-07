@@ -11,23 +11,43 @@ import SectionPage from './SectionPage';
 export default function Main() {
 
     const [test, setTest] = useState();
+    const [returnTop, setReturnTop] = useState();
 
     const theme = useContext(ThemeContext);
 
-    function scrolled(){
+    function scrolledReturnTop() {
+        
         let projets = document.querySelector("#projets");
         let networks = document.querySelector("#networks");
+        let skills = document.querySelector("#skills");
+        let formations = document.querySelector("#formations");
+        let me = document.querySelector("#me");
+        
         let windowHeight = document.body.clientHeight,
-            currentScroll = document.body.scrollTop || document.documentElement.scrollTop;
+        currentScroll = document.body.scrollTop || document.documentElement.scrollTop;
+        
+        let add = projets.offsetHeight + networks.offsetHeight + skills.offsetHeight + formations.offsetHeight + me.offsetHeight;
+        (currentScroll >= windowHeight - add) ? setReturnTop('returnTop') : setReturnTop('');
+        
+    }
+
+
+    function scrolledBackground(){
+        
+        let projets = document.querySelector("#projets");
+        let networks = document.querySelector("#networks");
+        
+        let windowHeight = document.body.clientHeight,
+        currentScroll = document.body.scrollTop || document.documentElement.scrollTop;
+        
         let add = projets.offsetHeight + networks.offsetHeight;
-        (currentScroll >= windowHeight - add) ?
-        setTest('fixed') : 
-        setTest('');
+        (currentScroll >= windowHeight - add) ? setTest('fixed') : setTest('');
     }
 
     useEffect(() => {
         if(window){
-            window.addEventListener("scroll", scrolled, false);
+            window.addEventListener("scroll", scrolledBackground, false);
+            window.addEventListener("scroll", scrolledReturnTop, false);
         }
     }, []);
 
@@ -39,6 +59,7 @@ export default function Main() {
                 theme={ThemeMe(theme)}
                 content={Me()}
             />
+            <a href="#home" id={returnTop}></a>
             <SectionPage 
                 title="Mon Parcours"
                 id="formations"
