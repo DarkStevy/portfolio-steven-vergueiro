@@ -5,7 +5,7 @@ export const arrayProject = {
             url: "https://simracesetup.fr",
             imgClipart: 'clipartSimracesetup',
             imgPresentationPc: "simracesetupPc",
-            developped: "Développement complet",
+            developped: "Développement complet solo",
             technology: [
                 "Symfony", "Twig", "Sass", "Html", "Js", "MySql"
             ],

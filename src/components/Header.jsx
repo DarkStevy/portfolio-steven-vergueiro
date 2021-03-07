@@ -10,7 +10,7 @@ export default function Header(props) {
     const theme = useContext(ThemeContext);
 
     return (
-        <header style={ThemeHeader(theme)}>
+        <header id="home" style={ThemeHeader(theme)}>
             <div style={ThemeNavHeader(theme)} id="nav-header">
                 <button onClick={changeTheme}>Boutton</button>
                 <nav>

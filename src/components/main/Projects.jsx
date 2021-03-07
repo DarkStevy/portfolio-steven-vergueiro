@@ -82,7 +82,7 @@ export default function Projects() {
                             <Cliparts nameImage={value.imgClipart}/>
                         </figure>
                         <div>
-                            <a onClick={() => click(index)} href="#projets">essaie</a>
+                            <a className="plus" onClick={() => click(index)} href="#projets"></a>
                         </div>
                     </div>
                 ))}
@@ -91,6 +91,7 @@ export default function Projects() {
             <div onClick={blockOverlay} id={overlayId}></div>
 
             <div id={blockDescriptionProject}>
+                <span onClick={blockOverlay} className="close"></span>
                 <Description/>
             </div>
         </>
