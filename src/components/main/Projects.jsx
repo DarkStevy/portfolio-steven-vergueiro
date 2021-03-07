@@ -26,16 +26,6 @@ export default function Projects() {
     function click(index) {
         description(index)
         blockOverlay()
-        background()
-    }
-
-    function background() {
-        if(descriptionProject !== undefined) {
-            setBackgroundDescription(descriptionProject.background)
-        }
-        else {
-            setBackgroundDescription(backgroundDefault.background)
-        }
     }
     
     useEffect(() => {
@@ -43,6 +33,12 @@ export default function Projects() {
             setOverlayId("openOverlayDescriptionProject")
             setBlockDescriptionProject("openDescriptionProject")
             document.body.style.overflow = "hidden";
+            if(descriptionProject !== undefined) {
+                setBackgroundDescription(descriptionProject.background)
+            }
+            else {
+                setBackgroundDescription(backgroundDefault.background)
+            }
         }
         else if(overlay === false) {
             setOverlayId("closeOverlayDescriptionProject")
