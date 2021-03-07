@@ -61,14 +61,20 @@ export default function Projects() {
                     </div>
                     <div>
                         <p>{developped}</p>
-                        <p>{project}</p>
+                        <p>Projet : {project}</p>
+                        <h3>Description</h3>
                         <p>{description}</p>
                     </div>
                     <div>
-                        {technology.map((value) => (
-                            <p>{value}</p>
-                        ))}
+                        <h3>Technologies utilisées</h3>
+                        <div>
+                            {technology.map((value) => (
+                                <span>{value}</span>
+                            ))}
+                        </div>
+                        <h3>Catégorie</h3>
                         <p>{category}</p>
+                        <h3>Année de création</h3>
                         <p>{year}</p>
                     </div>
                     <div>
