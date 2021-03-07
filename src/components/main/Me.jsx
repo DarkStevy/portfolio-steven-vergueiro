@@ -13,9 +13,7 @@ export default function Me() {
     return (
         <div id="profile">
             <div>
-                <figure>
-                    <Image nameImage="profile"/>
-                </figure>
+                <Image nameImage="profile"/>
             </div>
             <div className="card" itemScope itemType="http://schema.org/LocalBusiness">
                 <p>Nom : <span itemProp="name">Vergueiro</span></p>

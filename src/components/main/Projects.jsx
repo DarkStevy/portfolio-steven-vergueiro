@@ -53,33 +53,33 @@ export default function Projects() {
         
             return (
                 <div id="descriptionProject">
-                    <div>
+                    <section id="presentation">
                         <h2>{name}</h2>
-                        <figure>
-                            <Presentations nameImage={imgPresentationPc} />
-                        </figure>
-                    </div>
-                    <div>
-                        <p>{developped}</p>
-                        <p>Projet : {project}</p>
-                        <h3>Description</h3>
-                        <p>{description}</p>
-                    </div>
-                    <div>
-                        <h3>Technologies utilisées</h3>
+                        <Presentations nameImage={imgPresentationPc} />
+                    </section>
+                    <section id="description">
                         <div>
-                            {technology.map((value) => (
-                                <span>{value}</span>
-                            ))}
+                            <p>{developped}</p>
+                            <p>Projet : {project}</p>
+                            <h3>Description</h3>
+                            <p>{description}</p>
                         </div>
-                        <h3>Catégorie</h3>
-                        <p>{category}</p>
-                        <h3>Année de création</h3>
-                        <p>{year}</p>
-                    </div>
-                    <div>
-                        <a href={url} target="_blank">Voir le site</a>
-                    </div>
+                        <div>
+                            <h3>Technologies utilisées</h3>
+                            <div>
+                                {technology.map((value) => (
+                                    <span>{value}</span>
+                                ))}
+                            </div>
+                            <h3>Catégorie</h3>
+                            <p>{category}</p>
+                            <h3>Année de création</h3>
+                            <p>{year}</p>
+                        </div>
+                        <div>
+                            <a href={url} target="_blank">Voir le site</a>
+                        </div>
+                    </section>
                 </div>
             )
         }
@@ -95,10 +95,10 @@ export default function Projects() {
             <div id="project">
                 {arrayProject.projects.map((value, index) => (
                     <div key={index} id={value.name}>
-                        <figure>
+                        <div className="clipart">
                             <Cliparts nameImage={value.imgClipart}/>
-                        </figure>
-                        <div>
+                        </div>
+                        <div className="hoverClipart">
                             <a className="plus" onClick={() => click(index)} href="#projets"></a>
                         </div>
                     </div>

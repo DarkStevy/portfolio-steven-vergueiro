@@ -9,7 +9,7 @@ main {
     background-size: cover;
     background-repeat: no-repeat;
     background-attachment: fixed;
-    section {    
+    >section {    
         padding-top: 70px;
         min-height: calc(100vh - 70px);
         height: auto;

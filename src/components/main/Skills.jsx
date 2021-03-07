@@ -5,42 +5,42 @@ export default function Skills() {
 
     return (
         <div id="competences">
-            <figure>
+            <div>
                 <LogosNetworks nameImage="html" />
-            </figure>
-            <figure>
+            </div>
+            <div>
                 <LogosNetworks nameImage="css" />
-            </figure>
-            <figure>
+            </div>
+            <div>
                 <LogosNetworks nameImage="js" />
-            </figure>
-            <figure>
+            </div>
+            <div>
                 <LogosNetworks nameImage="bootstrap" />
-            </figure>
-            <figure>
+            </div>
+            <div>
                 <LogosNetworks nameImage="sass" />
-            </figure>
-            <figure>
+            </div>
+            <div>
                 <LogosNetworks nameImage="php" />
-            </figure>
-            <figure>
+            </div>
+            <div>
                 <LogosNetworks nameImage="mysql" />
-            </figure>
-            <figure>
+            </div>
+            <div>
                 <LogosNetworks nameImage="symfony" />
-            </figure>
-            <figure>
+            </div>
+            <div>
                 <LogosNetworks nameImage="react" />
-            </figure>
-            <figure>
+            </div>
+            <div>
                 <LogosNetworks nameImage="gatsby" />
-            </figure>
-            <figure>
+            </div>
+            <div>
                 <LogosNetworks nameImage="photoshop" />
-            </figure>
-            <figure>
+            </div>
+            <div>
                 <LogosNetworks nameImage="illustrator" />
-            </figure>
+            </div>
         </div>
     )
 }

@@ -5,13 +5,14 @@
         display: flex;
         flex-wrap: wrap;
         flex-direction: row;
+        padding: 40px 0 40px 0;
     
-        >figure {
+        >div {
             width: $col-2;
-            text-align: center;
-            >img {
-                width: 60%;
-                padding: 20px 0;
+            margin-top: 40px;
+            >div {
+                width: 70%;
+                margin: auto;
             }
         }
     }
