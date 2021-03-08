@@ -8,6 +8,9 @@ export default function Networks() {
             <div>
                 <LogoNetworks nameImage="linkedin"/>
             </div>
+            <div>
+                <LogoNetworks nameImage="github"/>
+            </div>
         </div>
     )
 }

@@ -23,12 +23,21 @@ const LogoNetworks = ({nameImage}) => {
           }
         }
       }
+      github: file(relativePath: { eq: "github.png" }) {
+        childImageSharp {
+          fluid(maxWidth: 2000) {
+            ...GatsbyImageSharpFluid
+          }
+        }
+      }
     }
   `)
 
   switch (nameImage) {
     case 'linkedin':
       return <Img fluid={data.linkedin.childImageSharp.fluid} />;
+    case 'github':
+      return <Img fluid={data.github.childImageSharp.fluid} />;
     default:
       break;
   }
