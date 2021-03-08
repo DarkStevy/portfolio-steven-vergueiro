@@ -13,19 +13,12 @@ import Img from "gatsby-image"
  * - `useStaticQuery`: https://www.gatsbyjs.com/docs/use-static-query/
  */
 
-const LogosNetworks = ({nameImage}) => {
+const LogoNetworks = ({nameImage}) => {
   const data = useStaticQuery(graphql`
     query {
-      github: file(relativePath: { eq: "github.png" }) {
-        childImageSharp {
-          fluid(maxWidth: 1000) {
-            ...GatsbyImageSharpFluid
-          }
-        }
-      }
       linkedin: file(relativePath: { eq: "linkedin.png" }) {
         childImageSharp {
-          fluid(maxWidth: 1000) {
+          fluid(maxWidth: 2000) {
             ...GatsbyImageSharpFluid
           }
         }
@@ -34,8 +27,6 @@ const LogosNetworks = ({nameImage}) => {
   `)
 
   switch (nameImage) {
-    case 'github':
-      return <Img fluid={data.github.childImageSharp.fluid} />;
     case 'linkedin':
       return <Img fluid={data.linkedin.childImageSharp.fluid} />;
     default:
@@ -43,4 +34,4 @@ const LogosNetworks = ({nameImage}) => {
   }
 }
 
-export default LogosNetworks
+export default LogoNetworks

@@ -1,15 +1,12 @@
 import React from 'react';
-import LogosNetworks from '../images/logosNetworks';
+import LogoNetworks from '../images/LogoNetworks';
 
 export default function Networks() {
 
     return (
         <div>
             <div>
-                <LogosNetworks nameImage="linkedin"/>
-            </div>
-            <div>
-                <LogosNetworks nameImage="github"/>
+                <LogoNetworks nameImage="linkedin"/>
             </div>
         </div>
     )

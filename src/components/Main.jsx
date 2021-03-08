@@ -59,7 +59,7 @@ export default function Main() {
                 theme={ThemeMe(theme)}
                 content={Me()}
             />
-            <a href="#home" id={returnTop}></a>
+            <a href="#home" id={returnTop}> </a>
             <SectionPage 
                 title="Mon Parcours"
                 id="formations"
