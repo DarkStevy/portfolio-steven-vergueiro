@@ -1,5 +1,5 @@
 import React from 'react';
-import Image from '../images/LogosNetworks'
+import LogosSkills from '../images/LogoSkills';
 
 export default function Me() {
 
@@ -13,7 +13,7 @@ export default function Me() {
     return (
         <div id="profile">
             <div>
-                <Image nameImage="profile"/>
+                <LogosSkills nameImage="profile"/>
             </div>
             <div className="card" itemScope itemType="http://schema.org/LocalBusiness">
                 <p>Nom : <span itemProp="name">Vergueiro</span></p>

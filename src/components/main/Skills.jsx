@@ -1,45 +1,45 @@
 import React from 'react';
-import LogosNetworks from '../images/LogosNetworks';
+import LogosSkills from '../images/LogoSkills';
 
 export default function Skills() {
 
     return (
         <div id="competences">
             <div>
-                <LogosNetworks nameImage="html" />
+                <LogosSkills nameImage="html" />
             </div>
             <div>
-                <LogosNetworks nameImage="css" />
+                <LogosSkills nameImage="css" />
             </div>
             <div>
-                <LogosNetworks nameImage="js" />
+                <LogosSkills nameImage="js" />
             </div>
             <div>
-                <LogosNetworks nameImage="bootstrap" />
+                <LogosSkills nameImage="bootstrap" />
             </div>
             <div>
-                <LogosNetworks nameImage="sass" />
+                <LogosSkills nameImage="sass" />
             </div>
             <div>
-                <LogosNetworks nameImage="php" />
+                <LogosSkills nameImage="php" />
             </div>
             <div>
-                <LogosNetworks nameImage="mysql" />
+                <LogosSkills nameImage="mysql" />
             </div>
             <div>
-                <LogosNetworks nameImage="symfony" />
+                <LogosSkills nameImage="symfony" />
             </div>
             <div>
-                <LogosNetworks nameImage="react" />
+                <LogosSkills nameImage="react" />
             </div>
             <div>
-                <LogosNetworks nameImage="gatsby" />
+                <LogosSkills nameImage="gatsby" />
             </div>
             <div>
-                <LogosNetworks nameImage="photoshop" />
+                <LogosSkills nameImage="photoshop" />
             </div>
             <div>
-                <LogosNetworks nameImage="illustrator" />
+                <LogosSkills nameImage="illustrator" />
             </div>
         </div>
     )
