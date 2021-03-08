@@ -1,0 +1,18 @@
+#networks {
+    >div {
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: row;
+        padding-top: 80px;
+
+        >div {
+            width: $col-3;
+            margin: auto;
+            a {
+               display: block;
+               width: 60%;
+               margin: auto;
+            }
+        }
+    }
+}

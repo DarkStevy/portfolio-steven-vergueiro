@@ -114,10 +114,28 @@ const LogosNetworks = ({nameImage}) => {
           }
         }
       }
+      github: file(relativePath: { eq: "github.png" }) {
+        childImageSharp {
+          fluid(maxWidth: 1000) {
+            ...GatsbyImageSharpFluid
+          }
+        }
+      }
+      linkedin: file(relativePath: { eq: "linkedin.png" }) {
+        childImageSharp {
+          fluid(maxWidth: 1000) {
+            ...GatsbyImageSharpFluid
+          }
+        }
+      }
     }
   `)
 
   switch (nameImage) {
+    case 'github':
+      return <Img fluid={data.github.childImageSharp.fluid} />;
+    case 'linkedin':
+      return <Img fluid={data.linkedin.childImageSharp.fluid} />;
     case 'bootstrap':
       return <Img fluid={data.bootstrap.childImageSharp.fluid} />;
     case 'css':
