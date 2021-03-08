@@ -77,7 +77,7 @@ export default function Projects() {
                             <p>{year}</p>
                         </div>
                         <div>
-                            <a href={url} target="_blank">Voir le site</a>
+                            <a href={url} target="blank">Voir le site</a>
                         </div>
                     </section>
                 </div>
@@ -99,7 +99,7 @@ export default function Projects() {
                             <Cliparts nameImage={value.imgClipart}/>
                         </div>
                         <div className="hoverClipart">
-                            <a className="plus" onClick={() => click(index)} href="#projets"></a>
+                            <a className="plus" onClick={() => click(index)} href="#projets"> </a>
                         </div>
                     </div>
                 ))}
