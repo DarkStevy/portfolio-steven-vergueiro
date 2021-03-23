@@ -31,4 +31,168 @@
             }
         }
     }
+
+    
+    position: relative;
+    .SectionRigth {
+        >p {
+            &:first-child {
+                span {
+                    display: inline-block;
+                    position: absolute;
+                    z-index: 200;
+                    transform: translateX(+1000%);
+                }
+            }
+            &:nth-child(2) {
+                span {
+                    display: inline-block;
+                    position: absolute;
+                    z-index: 200;
+                    transform: translateX(+2000%);
+                }
+            }
+            &:nth-child(3) {
+                span {
+                    display: inline-block;
+                    position: absolute;
+                    z-index: 200;
+                    transform: translateX(+2500%);
+                }
+            }
+            &:nth-child(4) {
+                span {
+                    display: inline-block;
+                    position: absolute;
+                    z-index: 200;
+                    transform: translateX(+3000%);
+                }
+            }
+            &:nth-child(5) {
+                span {
+                    display: inline-block;
+                    position: absolute;
+                    z-index: 200;
+                    transform: translateX(+3500%);
+                }
+            }
+            &:nth-child(6) {
+                span {
+                    display: inline-block;
+                    position: absolute;
+                    z-index: 200;
+                    transform: translateX(+4000%);
+                }
+            }
+            &:nth-child(7) {
+                span {
+                    display: inline-block;
+                    position: absolute;
+                    z-index: 200;
+                    transform: translateX(+4500%);
+                }
+            }
+            &:nth-child(8) {
+                span {
+                    display: inline-block;
+                    position: absolute;
+                    z-index: 200;
+                    transform: translateX(+5000%);
+                }
+            }
+            &:nth-child(9) {
+                span {
+                    display: inline-block;
+                    position: absolute;
+                    z-index: 200;
+                    transform: translateX(+5500%);
+                }
+            }
+        }
+    }
+    .SectionRigthCenter {
+        >p {
+            &:first-child {
+                span {
+                    display: inline-block;
+                    position:initial;
+                    z-index: 200;
+                    transform: translateX(0%);
+                    transition: transform 1s ease-out;
+                }
+            }
+            &:nth-child(2) {
+                span {
+                    display: inline-block;
+                    position: initial;
+                    z-index: 200;
+                    transform: translateX(0%);
+                    transition: transform 1.2s ease-out;
+                }
+            }
+            &:nth-child(3) {
+                span {
+                    display: inline-block;
+                    position: initial;
+                    z-index: 200;
+                    transform: translateX(0%);
+                    transition: transform 1.4s ease-out;
+                }
+            }
+            &:nth-child(4) {
+                span {
+                    display: inline-block;
+                    position: initial;
+                    z-index: 200;
+                    transform: translateX(0%);
+                    transition: transform 1.6s ease-out;
+                }
+            }
+            &:nth-child(5) {
+                span {
+                    display: inline-block;
+                    position: initial;
+                    z-index: 200;
+                    transform: translateX(0%);
+                    transition: transform 1.8s ease-out;
+                }
+            }
+            &:nth-child(6) {
+                span {
+                    display: inline-block;
+                    position: initial;
+                    z-index: 200;
+                    transform: translateX(0%);
+                    transition: transform 2s ease-out;
+                }
+            }
+            &:nth-child(7) {
+                span {
+                    display: inline-block;
+                    position: initial;
+                    z-index: 200;
+                    transform: translateX(0%);
+                    transition: transform 2.2s ease-out;
+                }
+            }
+            &:nth-child(8) {
+                span {
+                    display: inline-block;
+                    position: initial;
+                    z-index: 200;
+                    transform: translateX(0%);
+                    transition: transform 2.4s ease-out;
+                }
+            }
+            &:nth-child(9) {
+                span {
+                    display: inline-block;
+                    position: initial;
+                    z-index: 200;
+                    transform: translateX(0%);
+                    transition: transform 2.6s ease-out;
+                }
+            }
+        }
+    }
 }

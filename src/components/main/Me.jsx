@@ -1,7 +1,30 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import LogosSkills from '../images/LogoSkills';
 
 export default function Me() {
+    const [classRight, setClassRight] = useState("SectionRigth");
+
+    function scrolledChangeClass() {
+        
+        let projets = document.querySelector("#projets");
+        let networks = document.querySelector("#networks");
+        let skills = document.querySelector("#skills");
+        let formations = document.querySelector("#formations");
+        let me = document.querySelector("#me");
+        
+        let windowHeight = document.body.clientHeight,
+        currentScroll = document.body.scrollTop || document.documentElement.scrollTop;
+        
+        let add = projets.offsetHeight + networks.offsetHeight + skills.offsetHeight + formations.offsetHeight + me.offsetHeight;
+        (currentScroll >= windowHeight - add) && setClassRight('SectionRigthCenter');
+        
+    }
+
+    useEffect(() => {
+        if(window && classRight === "SectionRigth"){
+            window.addEventListener("scroll", scrolledChangeClass, false);
+        }
+    }, []);
 
     function getAge() { 
         var date = new Date(1994, 3, 9);
@@ -15,7 +38,7 @@ export default function Me() {
             <div>
                 <LogosSkills nameImage="profile"/>
             </div>
-            <div className="card" itemScope itemType="http://schema.org/LocalBusiness">
+            <div className={classRight} itemScope itemType="http://schema.org/LocalBusiness">
                 <p>Nom : <span itemProp="name">Vergueiro</span></p>
                 <p>Prénom : <span itemProp="name">Steven</span></p>
                 <p>Age : <span>{getAge()} ans</span></p>
