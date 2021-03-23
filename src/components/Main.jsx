@@ -54,7 +54,7 @@ export default function Main() {
     return (
         <main>
             <SectionPage 
-                title="Qui suis-je?" 
+                title="Qui suis-je???" 
                 id="me" 
                 theme={ThemeMe(theme)}
                 content={Me()}
